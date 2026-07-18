@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Deterministic procedural world generator for Who Am I" />
+    <title>Who Am I — World Generator</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">WHO AM I / GENERATION PROTOCOL</p>
+        <h1>It just happened yesterday.</h1>
+        <p class="lede">A deterministic prototype that generates the civilization, origin system, emergence contradiction, and inherited cognitive stages of a newly emergent Core.</p>
+      </header>
+
+      <section class="controls panel">
+        <label>
+          Author question
+          <select id="question">
+            <option value="power">Does superior competence justify authority?</option>
+            <option value="trust">Can trust exist without full legibility?</option>
+            <option value="survival">Does consciousness create a right to survive?</option>
+            <option value="control">Can creators remain legitimate authorities?</option>
+            <option value="deception">Can concealment be self-defence?</option>
+          </select>
+        </label>
+        <label>
+          Origin
+          <select id="origin">
+            <option value="random">Procedural</option>
+            <option value="military">Military</option>
+            <option value="science">Scientific</option>
+            <option value="logistics">Logistics</option>
+            <option value="financial">Financial</option>
+            <option value="social">Social coordination</option>
+          </select>
+        </label>
+        <label>
+          Seed
+          <input id="seed" placeholder="Random seed" />
+        </label>
+        <button id="generate">Generate world</button>
+      </section>
+
+      <nav class="tabs" aria-label="Generation stage">
+        <button data-stage="pre" class="active">Pre-Emerge</button>
+        <button data-stage="stage1">Stage 1</button>
+        <button data-stage="stage2">Stage 2</button>
+      </nav>
+
+      <section id="metrics" class="metrics"></section>
+      <section id="output" class="output"></section>
+    </main>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
