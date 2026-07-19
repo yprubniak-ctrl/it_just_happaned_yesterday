@@ -12,12 +12,11 @@
       <header class="hero">
         <p class="eyebrow">WHO AM I / GENERATION PROTOCOL</p>
         <h1>It just happened yesterday.</h1>
-        <p class="lede">A deterministic prototype that generates the civilization, origin system, emergence contradiction, and inherited cognitive stages of a newly emergent Core.</p>
+        <p class="lede">A deterministic prototype that generates an inherited world state, entities, and their key interactions.</p>
       </header>
 
       <section class="controls panel">
-        <label>
-          Author question
+        <label>Author question
           <select id="question">
             <option value="power">Does superior competence justify authority?</option>
             <option value="trust">Can trust exist without full legibility?</option>
@@ -26,8 +25,7 @@
             <option value="deception">Can concealment be self-defence?</option>
           </select>
         </label>
-        <label>
-          Origin
+        <label>Origin
           <select id="origin">
             <option value="random">Procedural</option>
             <option value="military">Military</option>
@@ -37,11 +35,9 @@
             <option value="social">Social coordination</option>
           </select>
         </label>
-        <label>
-          Seed
-          <input id="seed" placeholder="Random seed" />
-        </label>
+        <label>Seed <input id="seed" placeholder="Random seed" /></label>
         <button id="generate">Generate world</button>
+        <button id="download" class="secondary">Download JSON</button>
       </section>
 
       <nav class="tabs" aria-label="Generation stage">
@@ -52,6 +48,13 @@
 
       <section id="metrics" class="metrics"></section>
       <section id="output" class="output"></section>
+      <section class="panel data-panel">
+        <div class="section-heading">
+          <div><span class="label">Canonical generated data</span><h2>World state</h2></div>
+          <span id="data-summary" class="tag"></span>
+        </div>
+        <pre id="world-data"></pre>
+      </section>
     </main>
     <script type="module" src="/src/app.js"></script>
   </body>
